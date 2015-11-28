@@ -1,0 +1,3 @@
+#!/bin/sh
+erlc rudy.erl
+erl -noshell -s rudy main $1

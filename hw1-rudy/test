@@ -1,0 +1,7 @@
+#!/bin/sh
+erlc -W0 test.erl
+for ((i=0;i<$3-1;i++))
+do
+    erl -noshell -s test main $1 $2 &
+done
+erl -noshell -s test main $1 $2
